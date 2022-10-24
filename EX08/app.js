@@ -1,7 +1,10 @@
-const uneDobraRetorna = (array) => {
-
+const uneDobraRetorna = (vetor, ...extras) => {
+  for (let i = 0; i < extras.length; i++) {
+    extras[i] *= 2;
+  }
+  //console.log({ vetor, extras});
+  return [...vetor, ...extras];
 };
-
 
 const r1 = uneDobraRetorna([1, 2, 3], 4, 4)
   console.log(r1) // [1, 2, 3, 8, 8]
