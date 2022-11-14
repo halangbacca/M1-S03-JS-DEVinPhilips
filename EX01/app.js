@@ -1,10 +1,10 @@
-const procuraMinMax = (array) => {
-    if(array != null){    
-        let max = (Math.max(...array));
-        let min = (Math.min(...array));
-        console.log({max, min});
+const procuraMinMax = (numeros) => {
+    if(!Array.isArray(numeros) || !numeros.length){
+        console.log("Não é possível encontrar");     
     }else{
-        console.log("Não é possível encontrar"); 
+        let max = (Math.max(...numeros));
+        let min = (Math.min(...numeros));
+        console.log({max, min});
     }
 };
 
